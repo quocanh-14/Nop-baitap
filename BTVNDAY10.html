@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bai1:
+        function tinhTongUoc(a) {
+            let tongUoc = 0;
+
+            for (let i = 1; i < a; i++) {
+                if (a % i == 0) {
+                    //console.log('uoc', i);
+                    tongUoc = tongUoc + i;
+                }
+            }
+
+            return tongUoc;
+        }
+
+        function laSoHoanHao(a) {
+            return tinhTongUoc(a) == a;
+        }
+
+        function inSoHoanHao(N) {
+            for (let i = 1; i < N; i++) {
+                if (laSoHoanHao(i) == true) {
+                    console.log(i);
+                }
+            }
+        }
+
+        //inSoHoanHao(1000);
+
+        //Bai2:
+        function timMinMax(x) {
+            let min = x[0];
+            let max = x[0];
+
+            for (let i in x) {
+                if (x[i] < min) {
+                    min = x[i];
+                }
+
+                if (x[i] > max) {
+                    max = x[i];
+                }
+            }
+
+            return {
+                'min': min,
+                'max': max
+            }
+        }
+
+        let x = [2, 7, 11, 10];
+
+        //let kqMinMax = timMinMax(x);
+        //console.log(kqMinMax);
+    </script>
+</body>
+
+</html>
